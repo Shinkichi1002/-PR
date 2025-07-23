@@ -36,6 +36,47 @@
     </head>
     <body>
         <h1>香川大学 創造工学部 情報コース</h1>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像スライダー</title>
+  <style>
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    .slider img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .slider img.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <img src="jouhou1.jpg" alt="画像1" class="active">
+    <img src="jouhou2.jpg" alt="画像2">
+    <img src="jouhou4.png" alt="画像3">
+  </div>
+  <script>
+    const images = document.querySelectorAll('.slider img');
+    let currentIndex = 0;
+    setInterval(() => {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
         <h2>情報コースについて</h2>
             <p style="font-size: 1.0em;font-weight: bold;">香川大学創造工学部情報コースは、新しい社会をデザインできる次世代型の情報技術者の育成を目指すコースです。</p>
                 <p>情報学の基礎技術を土台として、先端技術とイノベーションの社会実装に対応した2つの専門プログラムを提供し、情報技術を用いて新しい社会をデザインできる次世代型の情報技術者を育成します。<br>
