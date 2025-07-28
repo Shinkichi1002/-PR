@@ -155,6 +155,15 @@
       top: 0;
       opacity: 1;
     }
+    .footer-link {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+    }
+
+    .footer-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
 </style>
 </head>
 <body>
@@ -279,10 +288,10 @@
     <hr style="margin: 20px 0; border-color: #444;">
     <h4>関連リンク</h4>
     <ul style="list-style: none; padding-left: 0;">
-      <li><a href="https://www.kagawa-u.ac.jp">香川大学公式サイト</a></li>
-      <li><a href="https://www.kagawa-u.ac.jp/kagawa-u_ead/">創造工学部ページ</a></li>
-      <li><a href="https://www.kagawa-u.ac.jp/kagawa-u_ead/introduction/staff/20697/">教員紹介</a></li>
-      <li><a href="https://www.kagawa-u.ac.jp/admission/">入試情報</a></li>
+      <li><a href="https://www.kagawa-u.ac.jp" class="footer-link">香川大学公式サイト</a></li>
+      <li><a href="https://www.kagawa-u.ac.jp/kagawa-u_ead/" class="footer-link">創造工学部ページ</a></li>
+      <li><a href="https://www.kagawa-u.ac.jp/kagawa-u_ead/introduction/staff/20697/" class="footer-link">教員紹介</a></li>
+      <li><a href="https://www.kagawa-u.ac.jp/admission/" class="footer-link">入試情報</a></li>
     </ul>
     <hr style="margin: 20px 0; border-color: #444;">
   </footer>
