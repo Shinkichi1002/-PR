@@ -132,9 +132,33 @@
     padding: 0.75em 1.5em;
     min-width: 60px;
   }
+  #welcome-banner {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      right: 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.75);
+      color: #333;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 16px;
+      z-index: 9999;
+      transition: top 0.8s ease, opacity 0.8s ease;
+      backdrop-filter: blur(6px);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    #welcome-banner.show {
+      top: 0;
+      opacity: 1;
+    }
 </style>
 </head>
 <body>
+  <div id="welcome-banner">香川大学 創造工学部 情報コースの紹介ページへようこそ！</div>
 
   <div class="header">
     <h1>香川大学 創造工学部 情報コース</h1>
@@ -262,6 +286,19 @@
     </ul>
     <hr style="margin: 20px 0; border-color: #444;">
   </footer>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("welcome-banner");
+
+    // 表示
+    banner.classList.add("show");
+
+    // 3秒後に非表示にする
+    setTimeout(() => {
+      banner.classList.remove("show");
+    }, 3000);
+  });
+</script>
 
 </body>
 </html>
